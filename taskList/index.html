@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskList</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app" class="app-container">
+      <header-page title="Lista de Tarefas"></header-page>
+      <input-task @task-added="handleTaskAdded"></input-task>
+      <filter-status @filter-changed="handleFilterChange"></filter-status>
+      <hr class="divider" />
+      <task-list :tasks="filteredTasks"></task-list>
+    </div>
+
+    <script src="https://unpkg.com/vue@2"></script>
+    <script src="./components/app.js"></script>
+  </body>
+</html>
